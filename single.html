@@ -77,14 +77,14 @@
         try {
           // Merge data file (2 parts)
           const dataUrl = await mergeFiles(
-            getParts("./Build/webporboi.data", 1, 2), 
-            "webporboi.data"
+            getParts("./Build/webporboi1.data", 1, 2), 
+            "webporboi1.data"
           );
           
           // Merge wasm file (3 parts)
           const codeUrl = await mergeFiles(
-            getParts("./Build/webporboi.wasm", 1, 3), 
-            "webporboi.wasm"
+            getParts("./Build/webporboi1.wasm", 1, 3), 
+            "webporboi1.wasm"
           );
 
           // Show the container
@@ -119,7 +119,7 @@
           
           var config = {
             dataUrl: dataUrl,  // Use merged data URL
-            frameworkUrl: buildUrl + "/webporboi.framework.js",
+            frameworkUrl: buildUrl + "/webporboi1.framework.js",
             codeUrl: codeUrl,  // Use merged wasm URL
             streamingAssetsUrl: "StreamingAssets",
             companyName: "DefaultCompany",
@@ -135,7 +135,7 @@
             document.getElementsByTagName('head')[0].appendChild(meta);
             container.className = "unity-mobile";
             canvas.className = "unity-mobile";
-            unityShowBanner('WebGL builds are not supported on mobile devices.');
+            unityShowBanner('WEBPORT BY CARTERYES.');
           } else {
             canvas.style.width = "960px";
             canvas.style.height = "600px";
